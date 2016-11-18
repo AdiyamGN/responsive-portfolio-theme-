@@ -1,0 +1,125 @@
+// ------------------ Variables ---------------------- //
+
+$white: #FFFFFF;
+$grey: rgba(0, 0, 0, 0.7);
+$light_grey: rgba(0, 0, 0, 0.4);
+$black: #000000;
+
+
+
+// ------------------ General Styles ----------------- //
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.cf:before, 
+.cf:after {
+	content: " ";
+	display: table;
+}
+
+.cf:after {
+	clear: both;
+}
+
+
+// ------------------ Header Styles ------------------ //
+
+header {
+	height: 450px;
+	background: url(../images/hero-bg.jpg) center center;
+	background-size: cover;
+	.logo {
+		height: 50px;
+		width: 50px;
+		float: left;
+		margin: 10px 0 0 30px;
+	}
+	nav {
+		float: right;
+		margin: 30px 30px 0 0;
+		a {
+			text-decoration: none;
+			display: inline-block;
+			margin-left: 20px;
+			color: $grey;
+			font-size: 14px;
+			font-weight: 700;
+			text-transform: uppercase;
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+	.title {
+		font-size: 72px;
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		text-align: center;
+		margin-bottom: 20px;
+		padding-top: 100px;
+		span {
+			display: inline-block;
+			padding: 0.2em 0.5em;
+			border: $white solid 10px;
+		}
+	}
+
+	.sub_title {
+		font-weight: 700;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: $white;
+		line-height: 1;
+	}
+}
+
+
+// ------------------ Footer Styles ------------------ //
+
+footer {
+	background: url(../images/hero-bg.jpg) center center;
+	background-size: cover;
+	.lockup {
+		padding: 50px 30px;
+		.logo {
+			height: 50px;
+			width: 50px;
+			float: left;
+			margin-right: 30px;
+		}
+		.content_wrap {
+			float: left;
+
+			nav {
+				a {
+					display: inline-block;
+					text-decoration: none;
+					color: rgba(0, 0, 0, 0.5);
+					font-size: 14px;
+					font-weight: 700;
+					text-transform: uppercase;
+					margin-left: 30px;
+					&:nth-child(1) {
+						margin-left: 0;
+					}
+					&:hover {
+						color: $grey;
+					}
+				}
+			}
+
+			.copyright {
+				margin: 0;
+				padding-top: 5px;
+				text-transform: uppercase;
+				font-size: 12px;
+				color: $light_grey;
+			}
+		}
+	}
+}
