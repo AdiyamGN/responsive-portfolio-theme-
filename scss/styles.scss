@@ -4,6 +4,10 @@ $white: #FFFFFF;
 $grey: rgba(0, 0, 0, 0.7);
 $light_grey: rgba(0, 0, 0, 0.4);
 $black: #000000;
+$text_color: #666666;
+$accent: #e1c184;
+$accent_icon: #c99065;
+$bg_color: #e5eaee;
 
 
 
@@ -11,6 +15,7 @@ $black: #000000;
 
 body {
 	font-family: 'Open Sans', sans-serif;
+	color: $text-color;
 }
 
 .cf:before, 
@@ -76,6 +81,63 @@ header {
 		color: $white;
 		line-height: 1;
 	}
+}
+
+
+// ------------------ About Me Styles ------------------ //
+
+h3 {
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: $accent;
+	letter-spacing: 0.8px;
+	text-align: center;
+	padding: 100px 0 30px;
+}
+
+.face_lockup {
+	max-width: 780px;
+	display: flex;
+	margin: 0 auto;
+	align-items: center;
+	justify-content: space-around;
+
+	.face_img {
+		width: 200px;
+		height: 200px;
+		background: url(../images/travitar.jpg);
+		border-radius: 50%;
+		order: 3;
+	}
+	.icon {
+		width: 100px;
+		height: 100px;
+		background: $bg_color;
+		border-radius: 50%;
+	}
+	.icon_pencil {
+			order: 1;
+	}
+	.icon_browser {
+			order: 2;
+	}
+	.icon_mouse {
+			order: 4;
+	}
+	.icon_video {
+			order: 5;
+	}
+}
+
+.blurb {
+	max-width: 620px;
+	padding: 0 15px;
+	margin: 50px auto;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 300;
+	line-height: 1.35;
 }
 
 
