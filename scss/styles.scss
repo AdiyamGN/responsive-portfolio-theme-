@@ -179,6 +179,66 @@ h3 {
 	}
 }
 
+// ------------------ Work Styles ------------------ //
+
+.alt_section {
+	background: $bg_color;
+}
+
+.thumb_container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding-bottom: 100px;
+	.thumb_unit {
+		display: block;
+		width: 25%;
+		padding-top: 18%;
+		overflow: hidden;
+		float: left;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		
+		@media screen and (max-width: 760px) {
+			width: 50%;
+			padding-top: 30%;
+		}
+
+
+		.thumb_overlay {
+			position: absolute;
+			height: 100%;
+			top: 100%;
+			right: 0;
+			bottom: null;
+			left: 0;
+			text-align: center;
+			background: fade-out($accent, 0.1);
+			transition: 0.4s ease-in-out;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			strong {
+				display: block;
+				padding: 0 20px;
+				color: $white;
+				text-transform: uppercase;
+				font-weight: 300;
+				font-size: 24px;
+				line-height: 1.2
+			}
+		}
+		&:hover .thumb_overlay {
+			position: absolute;
+			top: 0%;
+			right: 0;
+			bottom: null;
+			left: 0
+		}
+	}
+}
+
 // ------------------ Footer Styles ------------------ //
 
 footer {
@@ -263,5 +323,6 @@ footer {
 		margin: 100px auto;
 		text-align: center;
 	}
+
 }
 
