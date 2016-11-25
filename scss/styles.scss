@@ -32,10 +32,14 @@ body {
 // ------------------ Header Styles ------------------ //
 
 header {
-	height: 450px;
 	background: url(../images/hero-bg.jpg) center center;
 	background-size: cover;
+	padding-bottom: 100px;
+	
 	.logo {
+		background: url(../images/logo.svg) center center;
+		background-size: cover;
+		background-repeat: no-repeat;
 		height: 50px;
 		width: 50px;
 		float: left;
@@ -43,7 +47,8 @@ header {
 	}
 	nav {
 		float: right;
-		margin: 30px 30px 0 0;
+		padding: 30px 30px 0 0;
+
 		a {
 			text-decoration: none;
 			display: inline-block;
@@ -80,6 +85,24 @@ header {
 		letter-spacing: 0.05em;
 		color: $white;
 		line-height: 1;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	header {
+		.logo {
+			margin: 20px auto 0px;
+			float: none;
+		}
+
+		nav {
+			float: none;
+			text-align: center;
+		}
+
+		.title {
+			padding-top: 0px;
+		}
 	}
 }
 
@@ -242,14 +265,10 @@ h3 {
 
 // ------------------ Clients Styles ----------------- //
 .section-client {
-	max-width: 100%;
+	position: relative;
 }
 .clients {
 	padding: 80px 0 60px
-}
-
-.section-client {
-	position: relative;
 }
 
 .client_controls {
@@ -262,6 +281,7 @@ h3 {
 		width: 40px;
 		height: 40px;
 		margin-top: -20px;
+		cursor: pointer;
 	}
 	.client_control_next {
 		position: absolute;
@@ -283,9 +303,11 @@ h3 {
 	width: 100%;
 	position: relative;
 	.client_unit {
-		max-width: 780px;
-		margin: 0 auto 50px;
+		max-width: 750px;
+		margin: 50px auto;
+		position: relative;
 		display: flex;
+		z-index: 1;
 
 		.client_face {
 			min-width: 300px;
@@ -334,20 +356,24 @@ h3 {
 
 .clients_logo {
 	position: relative;
-	width: 750px;
+	z-index: 3;
+	max-width: 750px;
 	margin: 0 auto 100px;
 	align-items: space-around;
 	justify-content: center;
 	display: flex;
+	align-items: flex-end;
 	.client_logo {
 		height: 80px;
-		min-width: 200px;
+		min-width: 25%;
 		background-image: url(../images/clients/logo1.png);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
 		cursor: pointer;
-		margin: 0px 20px;
+		padding-bottom: 20px;
+		margin: 0px 20px 20px;
+		opacity: 0.5;
 		&.active_client {
 			box-shadow: 0px 4px 0px $accent;
 		}
@@ -391,13 +417,13 @@ h3 {
 }
 
 .big_link {
-	display: inline-block;
-	font-size: 58px;
+	display: block;
+	font-size: 68px;
 	font-weight: 300;
 	line-height: 1;
 	color: $accent;
 	text-decoration: none;
-	margin-bottom: 120px;
+	padding-bottom: 120px;
 }
 
 
