@@ -266,6 +266,7 @@ h3 {
 // ------------------ Clients Styles ----------------- //
 .section-client {
 	position: relative;
+	widows: 100%;
 }
 .clients {
 	padding: 80px 0 60px
@@ -357,7 +358,7 @@ h3 {
 .clients_logo {
 	position: relative;
 	z-index: 3;
-	max-width: 750px;
+	max-width: 650px;
 	margin: 0 auto 100px;
 	align-items: space-around;
 	justify-content: center;
